@@ -91,12 +91,12 @@ public class BFS {
         // 연속적으로 상하좌우가 배추가 심어져 있다면 해당 위치를 방문한 것으로 체크하고
         // queue를 통해 탐색 진행
         while(!q.isEmpty()){
-            Node nodde = q.poll();
+            Node node = q.poll();
 
             /* 상하좌우 살펴보기*/
             for(int i = 0; i<4; i++){
-                cx = nodde.x + dx[i];
-                cy = nodde.y + dy[i];
+                cx = node.x + dx[i];
+                cy = node.y + dy[i];
 
                 /* 지금 보는 방향이 좌표로서 존재하고, 방문한 적이 없고, 배추가 심어져 있다면*/
                 if(rangeCheck() && !visit[cx][cy] && map[cx][cy] == 1){
